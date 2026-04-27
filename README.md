@@ -48,5 +48,40 @@ Default threshold (0.50) is not optimal for business.
 
 We tested different thresholds and selected:
 
-```text
-Threshold = 0.20
+**Threshold = 0.20**
+
+---
+
+## Business Application
+
+This model is designed to support retention decisions.
+
+Example use case:
+
+- Rank customers by predicted churn probability
+- Select the top 20% highest-risk customers
+- Apply retention actions (e.g., discounts, outreach)
+
+This ensures that resources are focused on customers most likely to churn, maximizing return on intervention cost.
+
+---
+
+## Decision Rule
+
+Instead of predicting churn for reporting, the model is used to guide action:
+
+> "We act on customers above a probability threshold of 0.20"
+
+This converts model output into a clear operational strategy.
+
+## Sample Output
+
+Example model output:
+
+| Customer ID | Churn Probability | Decision |
+|------------|------------------|----------|
+| 10231      | 0.78             | Act      |
+| 20455      | 0.65             | Act      |
+| 30912      | 0.18             | Ignore   |
+
+Customers above the 0.20 threshold are flagged for retention action.
