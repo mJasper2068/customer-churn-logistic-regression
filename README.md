@@ -91,8 +91,12 @@ This ensures that resources are focused on high-risk customers while controlling
 
 ## Sample Output
 
+Example model output:
+
 | Customer ID | Churn Probability | Decision |
-|------------|------------------|----------|
-| 10231      | 0.78             | Act      |
-| 20455      | 0.65             | Act      |
-| 30912      | 0.18             | Ignore   |
+|---|---:|---|
+| 10231 | 0.78 | Act |
+| 20455 | 0.65 | Act |
+| 30912 | 0.18 | Ignore |
+
+Customers above the 0.20 threshold are flagged for retention action.
